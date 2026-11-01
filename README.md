@@ -11,11 +11,21 @@
 - 네 편을 서로 다른 대목에서 고르는 법, 화면(장면) 고르기
 - 내기 전 점검: 사실과 정확히 맞는가, 소리 내어 읽어도 매끄러운가
 
-## 쓰는 법
+## 설치 (Claude Code)
+**방법 1. 명령 한 줄** — 모든 프로젝트에서 쓰려면:
 ```bash
-mkdir -p .claude/skills/youtube-shorts-from-longform
-cp SKILL.md .claude/skills/youtube-shorts-from-longform/
+mkdir -p ~/.claude/skills/youtube-shorts-from-longform && curl -fsSL https://raw.githubusercontent.com/ai-offwork/youtube-shorts-from-longform/main/SKILL.md -o ~/.claude/skills/youtube-shorts-from-longform/SKILL.md
 ```
+특정 프로젝트에서만 쓰려면 `~/.claude/skills` 대신 그 프로젝트의 `.claude/skills`에 넣으세요. 설치 후 **새 세션**을 시작하면 인식됩니다.
+
+**방법 2. Claude에게 맡기기** — Claude Code에 이렇게 말하면 파일을 받아 설치해 줍니다(Claude가 파일 받기·쓰기를 허용받은 경우).
+> `https://raw.githubusercontent.com/ai-offwork/youtube-shorts-from-longform/main/SKILL.md` 를 `~/.claude/skills/youtube-shorts-from-longform/SKILL.md`로 설치해줘
+
+**방법 3. 직접 복사** — 이 저장소를 받아 `SKILL.md`를 `~/.claude/skills/youtube-shorts-from-longform/`에 넣으면 됩니다.
+
+설치 확인: Claude Code에서 `/youtube-shorts-from-longform`을 입력하거나 "이 대본으로 쇼츠 4편 만들어 줘"처럼 요청해 보세요. 다른 에이전트라면 `SKILL.md`를 시스템 프롬프트로 넣으면 됩니다. claude.ai 채팅에서는 설정의 스킬 업로드(zip)를 쓰는 방식이라 메뉴 이름이 바뀔 수 있으니 안내 문서를 확인하세요.
+
+## 쓰는 법
 "이 대본으로 쇼츠 4편 만들어 줘"라고 롱폼 대본과 함께 요청하세요. 함께 쓰면 좋은 스킬: [youtube-explainer-script](https://github.com/ai-offwork/youtube-explainer-script).
 
 ## 주의
